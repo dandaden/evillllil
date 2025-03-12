@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wet.ogg-17f2fb503e71aa60a3a632713c565213.oggstr"
+
+[deps]
+
+source_file="res://mods/Asriel and Toriel's Dirty Secret/sfx/wet.ogg"
+dest_files=[ "res://.import/wet.ogg-17f2fb503e71aa60a3a632713c565213.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

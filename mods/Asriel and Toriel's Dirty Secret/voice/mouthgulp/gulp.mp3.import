@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gulp.mp3-f3199697586766290b2c811fb803ebbe.mp3str"
+
+[deps]
+
+source_file="res://mods/Asriel and Toriel's Dirty Secret/voice/mouthgulp/gulp.mp3"
+dest_files=[ "res://.import/gulp.mp3-f3199697586766290b2c811fb803ebbe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

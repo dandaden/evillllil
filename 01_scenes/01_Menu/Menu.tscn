@@ -1,0 +1,750 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://01_scenes/01_Menu/menu_level_select.gd" type="Script" id=1]
+[ext_resource path="res://00_assets/fonts/HelvetiPixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://01_scenes/01_Menu/menu_controller.gd" type="Script" id=3]
+[ext_resource path="res://00_assets/sfx/ui/menu_select.ogg" type="AudioStream" id=4]
+[ext_resource path="res://00_assets/sfx/ui/menu_select_inv.ogg" type="AudioStream" id=5]
+[ext_resource path="res://00_assets/sfx/menu/menu_impact.ogg" type="AudioStream" id=6]
+[ext_resource path="res://00_assets/sfx/ui/ui_mode.ogg" type="AudioStream" id=7]
+[ext_resource path="res://00_assets/sfx/ui/ui_tick.ogg" type="AudioStream" id=8]
+[ext_resource path="res://00_assets/sfx/ui/ui_accept.ogg" type="AudioStream" id=9]
+[ext_resource path="res://00_assets/textures/menu_pattern.png" type="Texture" id=10]
+[ext_resource path="res://00_assets/materials/background.tres" type="Material" id=11]
+[ext_resource path="res://00_assets/music/menu/menu_soft.ogg" type="AudioStream" id=12]
+[ext_resource path="res://00_assets/sfx/ui/ui_back.ogg" type="AudioStream" id=13]
+[ext_resource path="res://01_scenes/01_Menu/debug_console.gd" type="Script" id=14]
+[ext_resource path="res://01_scenes/01_Menu/debug_curdir.gd" type="Script" id=15]
+[ext_resource path="res://00_assets/sprites/menu/beatbanger_text.png" type="Texture" id=16]
+[ext_resource path="res://01_scenes/01_Menu/menu_main.gd" type="Script" id=17]
+[ext_resource path="res://00_assets/fonts/debug_font.tres" type="DynamicFont" id=18]
+[ext_resource path="res://02_prefabs/Volume/Volume.tscn" type="PackedScene" id=19]
+[ext_resource path="res://01_scenes/01_Menu/menu_options.gd" type="Script" id=20]
+[ext_resource path="res://00_assets/fonts/options_dynamicfont.tres" type="DynamicFont" id=21]
+[ext_resource path="res://00_assets/sfx/ui/ui_apply.ogg" type="AudioStream" id=22]
+[ext_resource path="res://00_assets/music/menu/menu_groovy.ogg" type="AudioStream" id=23]
+[ext_resource path="res://00_assets/music/menu/menu_light.ogg" type="AudioStream" id=24]
+[ext_resource path="res://01_scenes/01_Menu/Updater.gd" type="Script" id=25]
+[ext_resource path="res://00_assets/sfx/menu/update.ogg" type="AudioStream" id=26]
+[ext_resource path="res://00_assets/fonts/Mars_Needs_Cunnilingus.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://01_scenes/01_Menu/DemoEasterEgg.gd" type="Script" id=28]
+[ext_resource path="res://00_assets/sfx/menu/gallery.ogg" type="AudioStream" id=29]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="DynamicFont" id=6]
+size = 46
+font_data = ExtResource( 27 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="Animation" id=12]
+resource_name = "Float"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 70, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 649, -0.25, 0, 0.25, 0, 641, -0.25, 0, 0.25, 0, 649, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_detail = 2
+
+[sub_resource type="DynamicFont" id=14]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="DynamicFont" id=18]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sfx" type="Node" parent="."]
+
+[node name="ui_accept" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 9 )
+bus = "SFX"
+
+[node name="ui_back" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 13 )
+volume_db = 6.0
+bus = "SFX"
+
+[node name="menu_impact" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 6 )
+volume_db = -3.0
+autoplay = true
+bus = "Game"
+
+[node name="ui_select" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[node name="ui_select_inv" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[node name="ui_tick" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 8 )
+volume_db = 3.0
+bus = "SFX"
+
+[node name="ui_gallery" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 29 )
+volume_db = 6.0
+bus = "SFX"
+
+[node name="menu_theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -80.0
+autoplay = true
+bus = "Music"
+
+[node name="Tween" type="Tween" parent="menu_theme"]
+
+[node name="menu_theme2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -80.0
+autoplay = true
+bus = "Music"
+
+[node name="Tween" type="Tween" parent="menu_theme2"]
+
+[node name="menu_theme3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -80.0
+autoplay = true
+bus = "Music"
+
+[node name="Tween" type="Tween" parent="menu_theme3"]
+
+[node name="Background" type="Sprite" parent="."]
+material = ExtResource( 11 )
+scale = Vector2( 9.375, 12.5 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Tween" type="Tween" parent="Background"]
+
+[node name="Menu_Main" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Sprite" parent="Menu_Main"]
+position = Vector2( 300, 170 )
+texture = ExtResource( 16 )
+
+[node name="Tween" type="Tween" parent="Menu_Main/Title"]
+
+[node name="pulse" type="Timer" parent="Menu_Main/Title"]
+autostart = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu_Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_labels" type="CenterContainer" parent="Menu_Main/CenterContainer"]
+margin_left = 232.0
+margin_top = 219.0
+margin_right = 367.0
+margin_bottom = 485.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Main/CenterContainer/menu_labels"]
+margin_right = 135.0
+margin_bottom = 266.0
+
+[node name="menu_play" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_right = 135.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Play"
+align = 1
+valign = 1
+
+[node name="menu_options" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_top = 45.0
+margin_right = 135.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Controls"
+align = 1
+valign = 1
+
+[node name="menu_mods" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_top = 90.0
+margin_right = 135.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Mods"
+align = 1
+valign = 1
+
+[node name="menu_patreon" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_top = 135.0
+margin_right = 135.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Patreon"
+align = 1
+valign = 1
+
+[node name="menu_credits" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_top = 180.0
+margin_right = 135.0
+margin_bottom = 221.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="menu_quit" type="Label" parent="Menu_Main/CenterContainer/menu_labels/VBoxContainer"]
+margin_top = 225.0
+margin_right = 135.0
+margin_bottom = 266.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+text = "Quit"
+align = 1
+valign = 1
+
+[node name="Fade" type="ColorRect" parent="Menu_Main"]
+margin_right = 600.0
+margin_bottom = 800.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Menu_Main/Fade"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Menu_Main"]
+
+[node name="Menu_Options" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_apply_changes" type="Label" parent="Menu_Options"]
+margin_left = 178.0
+margin_top = 600.0
+margin_right = 421.0
+margin_bottom = 641.0
+custom_fonts/font = ExtResource( 21 )
+text = "Apply Changes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu_Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu_Options/HBoxContainer"]
+margin_left = 62.0
+margin_right = 489.0
+margin_bottom = 800.0
+custom_constants/margin_right = 100
+
+[node name="descriptions" type="CenterContainer" parent="Menu_Options/HBoxContainer/MarginContainer"]
+margin_right = 345.0
+margin_bottom = 800.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Options/HBoxContainer/MarginContainer/descriptions"]
+margin_top = 330.0
+margin_right = 345.0
+margin_bottom = 470.0
+
+[node name="_keybind_h" type="Label" parent="Menu_Options/HBoxContainer/MarginContainer/descriptions/VBoxContainer"]
+margin_right = 327.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 21 )
+text = "Slow Notes / Accept"
+
+[node name="_keybind_q" type="Label" parent="Menu_Options/HBoxContainer/MarginContainer/descriptions/VBoxContainer"]
+margin_top = 45.0
+margin_right = 327.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 21 )
+text = "Normal Notes / Back"
+
+[node name="_keybind_e" type="Label" parent="Menu_Options/HBoxContainer/MarginContainer/descriptions/VBoxContainer"]
+margin_top = 90.0
+margin_right = 327.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 21 )
+text = "Fast Notes "
+
+[node name="keys" type="CenterContainer" parent="Menu_Options/HBoxContainer"]
+margin_left = 493.0
+margin_right = 538.0
+margin_bottom = 800.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Options/HBoxContainer/keys"]
+margin_top = 330.0
+margin_right = 47.0
+margin_bottom = 470.0
+
+[node name="_keybind_h" type="Label" parent="Menu_Options/HBoxContainer/keys/VBoxContainer"]
+margin_right = 45.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 21 )
+text = "%s"
+
+[node name="_keybind_q" type="Label" parent="Menu_Options/HBoxContainer/keys/VBoxContainer"]
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 21 )
+text = "%s"
+
+[node name="_keybind_e" type="Label" parent="Menu_Options/HBoxContainer/keys/VBoxContainer"]
+margin_top = 90.0
+margin_right = 45.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 21 )
+text = "%s"
+
+[node name="Overlay" type="ColorRect" parent="Menu_Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.886275 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu_Options/Overlay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="overlay_label" type="Label" parent="Menu_Options/Overlay/CenterContainer"]
+margin_left = 126.0
+margin_top = 363.0
+margin_right = 473.0
+margin_bottom = 436.0
+custom_fonts/font = SubResource( 3 )
+text = "Press any key...
+Press Enter to apply: %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_apply" type="AudioStreamPlayer" parent="Menu_Options"]
+stream = ExtResource( 22 )
+
+[node name="Menu_Level_Select" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Node2D" parent="Menu_Level_Select"]
+
+[node name="Tween" type="Tween" parent="Menu_Level_Select/buttons"]
+
+[node name="top_bar" type="ColorRect" parent="Menu_Level_Select"]
+margin_left = -51.513
+margin_top = 48.0
+margin_right = 448.487
+margin_bottom = 88.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Menu_Level_Select/top_bar"]
+
+[node name="Label" type="Label" parent="Menu_Level_Select"]
+margin_left = 223.571
+margin_top = 51.1359
+margin_right = 495.571
+margin_bottom = 96.1359
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LEVEL SELECT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" type="ColorRect" parent="Menu_Level_Select"]
+margin_right = 600.0
+margin_bottom = 800.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Menu_Level_Select/Fade"]
+
+[node name="Flash" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flash"]
+anims/FadeIn = SubResource( 5 )
+
+[node name="Volume" parent="." instance=ExtResource( 19 )]
+visible = false
+
+[node name="Version" type="Label" parent="."]
+margin_left = 600.0
+margin_top = 800.0
+margin_right = 575.0
+margin_bottom = 752.0
+grow_horizontal = 0
+grow_vertical = 2
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurDir" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 11.0
+margin_right = 48.0
+margin_bottom = 42.0
+text = "Curdir
+"
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mode" type="Label" parent="."]
+visible = false
+margin_left = 497.231
+margin_top = 771.075
+margin_right = 578.231
+margin_bottom = 785.075
+text = "HARD MODE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Updater" type="HTTPRequest" parent="."]
+script = ExtResource( 25 )
+
+[node name="UpdateSound" type="AudioStreamPlayer" parent="Updater"]
+stream = ExtResource( 26 )
+volume_db = 3.0
+
+[node name="UpdateVisual" type="Control" parent="Updater"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpdateText" type="Label" parent="Updater/UpdateVisual"]
+visible = false
+margin_left = 70.0
+margin_top = 649.0
+margin_right = 530.0
+margin_bottom = 696.0
+custom_fonts/font = SubResource( 6 )
+text = "UPDATE AVAILABLE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClickMe" type="Label" parent="Updater/UpdateVisual/UpdateText"]
+margin_top = 32.0
+margin_right = 450.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 7 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Updater/UpdateVisual/UpdateText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.00012207
+margin_bottom = 24.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Updater/UpdateVisual/UpdateText"]
+autoplay = "Float"
+anims/Float = SubResource( 12 )
+
+[node name="debug_console" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 15.0
+margin_top = 742.0
+margin_right = 339.0
+margin_bottom = 785.0
+grow_vertical = 0
+size_flags_vertical = 9
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Console_Screen" type="VBoxContainer" parent="debug_console"]
+margin_right = 324.0
+margin_bottom = 14.0
+grow_vertical = 0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="debug_input" type="PanelContainer" parent="debug_console"]
+margin_top = 18.0
+margin_right = 324.0
+margin_bottom = 43.0
+custom_styles/panel = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="debug_console/debug_input"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 322.0
+margin_bottom = 23.0
+
+[node name="Caret" type="Label" parent="debug_console/debug_input/HBoxContainer"]
+margin_top = 1.0
+margin_right = 21.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 14 )
+text = " > "
+
+[node name="input" type="LineEdit" parent="debug_console/debug_input/HBoxContainer"]
+margin_left = 25.0
+margin_right = 320.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = ExtResource( 18 )
+max_length = 11
+
+[node name="clear" type="Timer" parent="debug_console/debug_input/HBoxContainer/input"]
+wait_time = 0.01
+one_shot = true
+
+[node name="ui_mode" type="AudioStreamPlayer" parent="debug_console/debug_input"]
+stream = ExtResource( 7 )
+
+[node name="DemoEasterEgg" type="WindowDialog" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 17 )
+resizable = true
+script = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="DemoEasterEgg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.921569 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="DemoEasterEgg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 200
+custom_constants/margin_left = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DemoEasterEgg/MarginContainer"]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 500.0
+margin_bottom = 800.0
+custom_fonts/normal_font = SubResource( 18 )
+bbcode_enabled = true
+bbcode_text = "[center]
+Looking for secrets are you?
+
+You've come to the right place. You've made it to the door, But it looks like you're missing the key.
+
+Where is the key?... It's not here. I'll give you a hint... 
+
+The key lies at the starting line.
+
+Press ESC to close this window
+[/center]"
+text = "
+Looking for secrets are you?
+
+You've come to the right place. You've made it to the door, But it looks like you're missing the key.
+
+Where is the key?... It's not here. I'll give you a hint... 
+
+The key lies at the starting line.
+
+Press ESC to close this window
+"
+scroll_active = false
+
+[connection signal="timeout" from="Menu_Main/Title/pulse" to="." method="_on_pulse_timeout"]
+[connection signal="got_update" from="Updater" to="." method="_on_got_update"]
+[connection signal="request_completed" from="Updater" to="Updater" method="_on_Updater_request_completed"]
+[connection signal="pressed" from="Updater/UpdateVisual/UpdateText/Button" to="Updater" method="_on_pressed"]
+[connection signal="boomer" from="debug_console" to="DemoEasterEgg" method="_on_debug_console_boomer"]
+[connection signal="text_entered" from="debug_console/debug_input/HBoxContainer/input" to="debug_console" method="run_command"]
+[connection signal="timeout" from="debug_console/debug_input/HBoxContainer/input/clear" to="debug_console" method="clear_text"]

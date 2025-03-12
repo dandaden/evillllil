@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/128_pay_the_price.ogg-1988db6009f6e62996b4b2213cc9fd24.oggstr"
+
+[deps]
+
+source_file="res://00_assets/128_pay_the_price.ogg"
+dest_files=[ "res://.import/128_pay_the_price.ogg-1988db6009f6e62996b4b2213cc9fd24.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

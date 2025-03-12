@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://01_scenes/07_Mod_Browser/mod_browser.gd" type="Script" id=1]
+[ext_resource path="res://00_assets/textures/menu_pattern.png" type="Texture" id=2]
+[ext_resource path="res://00_assets/materials/background.tres" type="Material" id=3]
+[ext_resource path="res://00_assets/sfx/ui/round_end_tick.ogg" type="AudioStream" id=4]
+[ext_resource path="res://00_assets/music/menu/chiptune.ogg" type="AudioStream" id=5]
+[ext_resource path="res://00_assets/fonts/debug_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://00_assets/sfx/ui/ui_back.ogg" type="AudioStream" id=7]
+[ext_resource path="res://02_prefabs/Volume/Volume.tscn" type="PackedScene" id=8]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+material = ExtResource( 3 )
+scale = Vector2( 9.375, 12.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Tween" type="Tween" parent="Background"]
+
+[node name="Loading" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Loading..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoModsText" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "No Mods Found :("
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="UiTick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="UiBack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 680.0
+margin_right = 600.0
+margin_bottom = 800.0
+color = Color( 0, 0, 0, 0.870588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 130.0
+margin_top = 742.638
+margin_right = 468.0
+margin_bottom = 770.638
+custom_fonts/font = ExtResource( 6 )
+text = "Press %s to go back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 130.0
+margin_top = 710.0
+margin_right = 468.0
+margin_bottom = 738.0
+custom_fonts/font = ExtResource( 6 )
+text = "Press %s to load level"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" parent="." instance=ExtResource( 8 )]
+visible = false

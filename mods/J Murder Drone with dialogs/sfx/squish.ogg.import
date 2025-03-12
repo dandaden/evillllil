@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/squish.ogg-2d43b6509da67ea06bb31976c37f30a4.oggstr"
+
+[deps]
+
+source_file="res://mods/J Murder Drone with dialogs/sfx/squish.ogg"
+dest_files=[ "res://.import/squish.ogg-2d43b6509da67ea06bb31976c37f30a4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

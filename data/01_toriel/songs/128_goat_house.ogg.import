@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/128_goat_house.ogg-fc6e519f0c26d4ce544e93dc05d93d55.oggstr"
+
+[deps]
+
+source_file="res://data/01_toriel/songs/128_goat_house.ogg"
+dest_files=[ "res://.import/128_goat_house.ogg-fc6e519f0c26d4ce544e93dc05d93d55.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

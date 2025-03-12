@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wetterslap.ogg-b0dba32569d2e8134b6967dbd9bc554d.oggstr"
+
+[deps]
+
+source_file="res://mods/Asriel and Toriel's Dirty Secret/sfx/wetterslap.ogg"
+dest_files=[ "res://.import/wetterslap.ogg-b0dba32569d2e8134b6967dbd9bc554d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://00_assets/textures/no_image.png" type="Texture" id=1]
+[ext_resource path="res://02_prefabs/ModButton/mod_button.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+font_data = SubResource( 4 )
+
+[node name="ModButton" type="Sprite"]
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_top = -40.0
+anchor_bottom = -40.0
+margin_left = -390.0
+margin_top = -10.0
+margin_right = 390.0
+margin_bottom = 90.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SongName" type="Label" parent="."]
+margin_left = -246.0
+margin_top = 13.0
+margin_right = 380.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 3 )
+text = "_song"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = -90.0
+anchor_top = 37.75
+anchor_right = 423.0
+anchor_bottom = 37.75
+margin_left = -179.0
+margin_top = -81.0
+margin_right = -43.0
+margin_bottom = -37.0
+custom_fonts/font = SubResource( 5 )
+text = "%s"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Thumb" type="TextureRect" parent="."]
+anchor_left = -72.0
+anchor_top = -32.0
+anchor_right = -72.0
+anchor_bottom = -32.0
+margin_left = -316.0
+margin_top = -16.0
+margin_right = -220.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -270.0
+margin_top = 5.04732
+margin_right = 390.0
+margin_bottom = 7.04732
+__meta__ = {
+"_edit_use_anchors_": false
+}

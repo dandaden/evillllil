@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pause_selected.ogg-c14052247fa495321564c51508b7aafb.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/menu/pause_selected.ogg"
+dest_files=[ "res://.import/pause_selected.ogg-c14052247fa495321564c51508b7aafb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

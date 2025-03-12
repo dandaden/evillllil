@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/score_tick.ogg-a3e7eccfb51ed469121b1e970f146679.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/menu/score_tick.ogg"
+dest_files=[ "res://.import/score_tick.ogg-a3e7eccfb51ed469121b1e970f146679.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

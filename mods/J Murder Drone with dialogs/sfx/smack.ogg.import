@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/smack.ogg-be7f1288ac532b9b452465f3b3dfa571.oggstr"
+
+[deps]
+
+source_file="res://mods/J Murder Drone with dialogs/sfx/smack.ogg"
+dest_files=[ "res://.import/smack.ogg-be7f1288ac532b9b452465f3b3dfa571.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

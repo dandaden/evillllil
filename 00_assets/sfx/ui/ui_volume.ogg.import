@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_volume.ogg-8c4258c433ebe66989cf9dc82eeee197.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/ui/ui_volume.ogg"
+dest_files=[ "res://.import/ui_volume.ogg-8c4258c433ebe66989cf9dc82eeee197.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

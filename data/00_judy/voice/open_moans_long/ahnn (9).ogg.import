@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ahnn (9).ogg-1fd20258b90a0dd3c5825e8644b0e3be.oggstr"
+
+[deps]
+
+source_file="res://data/00_judy/voice/open_moans_long/ahnn (9).ogg"
+dest_files=[ "res://.import/ahnn (9).ogg-1fd20258b90a0dd3c5825e8644b0e3be.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://02_prefabs/LevelButton/level_button.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.188235, 0.145098, 0.419608, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 100
+corner_radius_bottom_left = 100
+shadow_size = 1
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.211765, 0.145098, 0.4, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://00_assets/fonts/Mars_Needs_Cunnilingus.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 56
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+font_data = SubResource( 8 )
+
+[node name="level_button" type="Sprite"]
+script = ExtResource( 1 )
+
+[node name="BG" type="Panel" parent="."]
+margin_left = -272.0
+margin_top = -48.0
+margin_right = 340.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 424.595, 104 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gallery" type="Panel" parent="."]
+visible = false
+margin_left = 27.5946
+margin_top = -37.973
+margin_right = 154.595
+margin_bottom = -19.973
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Gallery"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "GALLERY UNLOCKED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = -224.0
+margin_top = -39.0
+margin_right = 264.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 10 )
+text = "LevelName"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Label" parent="."]
+margin_left = -224.0
+margin_top = 16.0
+margin_right = -65.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 12 )
+text = "HIGHSCORE : "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HighScore"]
+margin_left = 160.0
+margin_right = 319.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 12 )
+text = "0"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

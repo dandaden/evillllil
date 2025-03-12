@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/140_dinosaur.ogg-14b7ebd83ac298f43f8178d3d2cebf26.oggstr"
+
+[deps]
+
+source_file="res://data/02_yoshi/songs/140_dinosaur.ogg"
+dest_files=[ "res://.import/140_dinosaur.ogg-14b7ebd83ac298f43f8178d3d2cebf26.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

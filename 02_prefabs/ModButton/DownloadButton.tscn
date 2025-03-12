@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://00_assets/fonts/options_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://02_prefabs/ModButton/mod_button.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="DownloadButton" type="Sprite"]
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 3.05176e-05
+anchor_right = 3.05176e-05
+margin_left = -360.0
+margin_top = -20.0
+margin_right = 360.0
+margin_bottom = 40.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_title" type="Label" parent="."]
+margin_left = -330.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+text = "Download More Mods!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

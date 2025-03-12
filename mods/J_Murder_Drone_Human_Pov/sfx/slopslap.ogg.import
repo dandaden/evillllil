@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/slopslap.ogg-0db66d4fecef92b66615d6a6e97e3af8.oggstr"
+
+[deps]
+
+source_file="res://mods/J_Murder_Drone_Human_Pov/sfx/slopslap.ogg"
+dest_files=[ "res://.import/slopslap.ogg-0db66d4fecef92b66615d6a6e97e3af8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

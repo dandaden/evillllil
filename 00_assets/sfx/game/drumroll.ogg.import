@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/drumroll.ogg-409553d6f5c64a015598599f1dbd19f6.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/game/drumroll.ogg"
+dest_files=[ "res://.import/drumroll.ogg-409553d6f5c64a015598599f1dbd19f6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

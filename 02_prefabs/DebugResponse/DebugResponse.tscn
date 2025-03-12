@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://02_prefabs/DebugResponse/debug_response.gd" type="Script" id=1]
+[ext_resource path="res://00_assets/fonts/debug_font.tres" type="DynamicFont" id=2]
+
+[node name="input_response" type="VBoxContainer"]
+margin_right = 359.0
+margin_bottom = 39.0
+grow_vertical = 0
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="typed_command" type="Label" parent="."]
+margin_right = 359.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.470588, 0.470588, 0.470588, 1 )
+text = " > Command History"
+
+[node name="response" type="Label" parent="."]
+margin_top = 25.0
+margin_right = 359.0
+margin_bottom = 46.0
+custom_fonts/font = ExtResource( 2 )
+text = "Response goes here"

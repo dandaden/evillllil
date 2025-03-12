@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mm_mm_mm (6).ogg-1e310475a21f60cb8d94a39ed445416c.oggstr"
+
+[deps]
+
+source_file="res://data/00_judy/voice/closed_moans/mm_mm_mm (6).ogg"
+dest_files=[ "res://.import/mm_mm_mm (6).ogg-1e310475a21f60cb8d94a39ed445416c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

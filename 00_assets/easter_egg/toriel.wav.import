@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/toriel.wav-9a2c5fbb43f43e4133e0abb4924d0616.sample"
+
+[deps]
+
+source_file="res://00_assets/easter_egg/toriel.wav"
+dest_files=[ "res://.import/toriel.wav-9a2c5fbb43f43e4133e0abb4924d0616.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

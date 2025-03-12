@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_tick.ogg-1211c3a705a4777dd7e8818eeb40683e.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/ui/ui_tick.ogg"
+dest_files=[ "res://.import/ui_tick.ogg-1211c3a705a4777dd7e8818eeb40683e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

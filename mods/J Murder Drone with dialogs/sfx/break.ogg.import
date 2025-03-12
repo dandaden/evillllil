@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/break.ogg-73bd5fe8e62b1d46f0d350df73b88efb.oggstr"
+
+[deps]
+
+source_file="res://mods/J Murder Drone with dialogs/sfx/break.ogg"
+dest_files=[ "res://.import/break.ogg-73bd5fe8e62b1d46f0d350df73b88efb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

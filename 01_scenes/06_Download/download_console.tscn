@@ -1,0 +1,149 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://01_scenes/06_Download/download.gd" type="Script" id=1]
+[ext_resource path="res://00_assets/sfx/mods/download_finished.ogg" type="AudioStream" id=2]
+[ext_resource path="res://00_assets/sfx/mods/downloading.ogg" type="AudioStream" id=3]
+[ext_resource path="res://00_assets/sfx/mods/download_failed.ogg" type="AudioStream" id=4]
+[ext_resource path="res://00_assets/fonts/debug_font.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = SubResource( 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.789474 )
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.49
+orbit_velocity = 0.1
+orbit_velocity_random = 0.0
+scale = 9.87
+scale_random = 1.0
+color_ramp = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://00_assets/fonts/HelvetiPixel.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = SubResource( 6 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg" type="ColorRect" parent="."]
+margin_right = 600.0
+margin_bottom = 800.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 40
+custom_constants/margin_top = 40
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bg/MarginContainer"]
+modulate = Color( 1, 1, 1, 0.317647 )
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 560.0
+margin_bottom = 760.0
+custom_fonts/normal_font = SubResource( 2 )
+scroll_active = false
+scroll_following = true
+
+[node name="DownloadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="CompleteSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="FailedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 300, 400 )
+emitting = false
+amount = 60
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 5 )
+
+[node name="Status" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "DOWNLOADING ..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flash" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Failed" type="Control" parent="."]
+visible = false
+margin_left = 130.0
+margin_top = 742.638
+margin_right = 170.0
+margin_bottom = 782.638
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackText" type="Label" parent="Failed"]
+margin_right = 338.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 5 )
+text = "Press %s to go back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Error" type="Label" parent="Failed"]
+margin_top = -324.392
+margin_right = 338.0
+margin_bottom = -296.392
+custom_fonts/font = ExtResource( 5 )
+text = "Press %s to go back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

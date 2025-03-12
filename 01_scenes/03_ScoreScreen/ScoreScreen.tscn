@@ -1,0 +1,375 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://01_scenes/03_ScoreScreen/score_screen.gd" type="Script" id=1]
+[ext_resource path="res://00_assets/textures/menu_pattern.png" type="Texture" id=2]
+[ext_resource path="res://00_assets/fonts/HelvetiPixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://00_assets/materials/background.tres" type="Material" id=4]
+[ext_resource path="res://00_assets/sfx/menu/menu_impact.ogg" type="AudioStream" id=5]
+[ext_resource path="res://00_assets/fonts/score_screen_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://00_assets/sfx/ui/ui_accept.ogg" type="AudioStream" id=7]
+[ext_resource path="res://02_prefabs/Volume/Volume.tscn" type="PackedScene" id=8]
+[ext_resource path="res://00_assets/fonts/Mars_Needs_Cunnilingus.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://00_assets/sprites/menu/Bar.png" type="Texture" id=11]
+[ext_resource path="res://00_assets/music/menu/roundend_music_v2.ogg" type="AudioStream" id=13]
+[ext_resource path="res://00_assets/fonts/crypt-of-tomorrow-ut-font-no-rus.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://00_assets/sfx/menu/score_tick.ogg" type="AudioStream" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 14 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 512, 32 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 512, 32 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 512, 32 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 70
+font_data = ExtResource( 14 )
+
+[node name="ScoreScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+material = ExtResource( 4 )
+scale = Vector2( 9.375, 12.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Header" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 30.0
+margin_bottom = -690.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "RESULTS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SongName" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = -100.0
+margin_top = 120.0
+margin_right = 700.0
+margin_bottom = 160.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SongName"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 110.0
+margin_top = -12.0
+margin_right = -100.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Song Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 200.0
+margin_right = 600.0
+margin_bottom = 244.0
+custom_constants/margin_bottom = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Values" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 200.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Perfect" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/Perfect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.14902, 1, 0.0509804, 1 )
+text = "PERFECT : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Good" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/Good"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.686275, 1, 0, 1 )
+text = "GREAT : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ok" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/Ok"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 0.937255, 0, 1 )
+text = "GOOD : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Miss" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/Miss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 0.0980392, 0, 1 )
+text = "MISS : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxCombo" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/MaxCombo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+text = "MAX COMBO : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalScore" type="Panel" parent="Values"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 600.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Values/TotalScore"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+text = "TOTAL SCORE : %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" type="Label" parent="Options"]
+margin_left = 40.0
+margin_top = 681.666
+margin_right = 560.0
+margin_bottom = 725.666
+custom_fonts/font = SubResource( 5 )
+text = "Press R to retry"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Label" parent="Options"]
+margin_left = 40.0
+margin_top = 718.594
+margin_right = 560.0
+margin_bottom = 762.594
+custom_fonts/font = SubResource( 5 )
+text = "Press %s to continue"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GradeSound" type="AudioStreamPlayer" parent="."]
+
+[node name="Tick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -3.0
+
+[node name="Tween" type="Tween" parent="Music"]
+
+[node name="UiAccept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "SFX"
+
+[node name="Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Volume" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 460.0
+margin_right = 600.0
+margin_bottom = 640.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GradeFX" type="Node2D" parent="."]
+visible = false
+position = Vector2( 300, 550 )
+
+[node name="Label" type="Label" parent="GradeFX"]
+margin_left = -293.0
+margin_top = -45.0
+margin_right = 307.0
+margin_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 7 )
+text = "_RANK"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="GradeFX"]
+
+[node name="Grade" type="Node2D" parent="."]
+visible = false
+position = Vector2( 300, 550 )
+
+[node name="Label" type="Label" parent="Grade"]
+margin_left = -293.0
+margin_top = -45.0
+margin_right = 307.0
+margin_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 7 )
+text = "_RANK"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Grade"]
+
+[node name="Flash" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Flash"]
+
+[node name="Fade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Fade"]

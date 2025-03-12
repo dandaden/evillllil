@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gulp2.ogg-a1b6c67dbd73b361388fa8f1e05d5489.oggstr"
+
+[deps]
+
+source_file="res://mods/Asriel and Toriel's Dirty Secret/sfx/gulp2.ogg"
+dest_files=[ "res://.import/gulp2.ogg-a1b6c67dbd73b361388fa8f1e05d5489.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

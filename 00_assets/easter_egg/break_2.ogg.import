@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/break_2.ogg-bcfabe0d479cdbf4bdee5ec20cf9465d.oggstr"
+
+[deps]
+
+source_file="res://00_assets/easter_egg/break_2.ogg"
+dest_files=[ "res://.import/break_2.ogg-bcfabe0d479cdbf4bdee5ec20cf9465d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

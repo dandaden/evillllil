@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/aa (6).ogg-08384a5cfcb9946b1c9a44b965a89272.oggstr"
+
+[deps]
+
+source_file="res://data/00_judy/voice/open_moans/aa (6).ogg"
+dest_files=[ "res://.import/aa (6).ogg-08384a5cfcb9946b1c9a44b965a89272.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

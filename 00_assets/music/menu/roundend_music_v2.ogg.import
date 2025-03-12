@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/roundend_music_v2.ogg-19436d0ad1c869e909c88357129dfc91.oggstr"
+
+[deps]
+
+source_file="res://00_assets/music/menu/roundend_music_v2.ogg"
+dest_files=[ "res://.import/roundend_music_v2.ogg-19436d0ad1c869e909c88357129dfc91.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

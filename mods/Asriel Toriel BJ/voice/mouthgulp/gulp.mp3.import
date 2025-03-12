@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gulp.mp3-1d1e2ca1fd9ec98e1761d13cc5f2606c.mp3str"
+
+[deps]
+
+source_file="res://mods/Asriel Toriel BJ/voice/mouthgulp/gulp.mp3"
+dest_files=[ "res://.import/gulp.mp3-1d1e2ca1fd9ec98e1761d13cc5f2606c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

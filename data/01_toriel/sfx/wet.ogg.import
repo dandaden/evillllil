@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wet.ogg-b0966f8cdd5ea5a965c632bcb84111cc.oggstr"
+
+[deps]
+
+source_file="res://data/01_toriel/sfx/wet.ogg"
+dest_files=[ "res://.import/wet.ogg-b0966f8cdd5ea5a965c632bcb84111cc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

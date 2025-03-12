@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/slap.ogg-a9776e92d4d4645bf444ed4121703284.oggstr"
+
+[deps]
+
+source_file="res://mods/J Murder Drone with dialogs/sfx/slap.ogg"
+dest_files=[ "res://.import/slap.ogg-a9776e92d4d4645bf444ed4121703284.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

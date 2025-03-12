@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://00_assets/materials/background.tres" type="Material" id=1]
+[ext_resource path="res://00_assets/textures/menu_pattern.png" type="Texture" id=2]
+[ext_resource path="res://00_assets/fonts/debug_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://01_scenes/01_Menu/menu_mods.gd" type="Script" id=4]
+[ext_resource path="res://00_assets/sfx/ui/ui_back.ogg" type="AudioStream" id=5]
+[ext_resource path="res://00_assets/music/menu/menu_mods.ogg" type="AudioStream" id=6]
+[ext_resource path="res://00_assets/sfx/ui/ui_accept.ogg" type="AudioStream" id=7]
+[ext_resource path="res://00_assets/sfx/ui/round_end_tick.ogg" type="AudioStream" id=8]
+[ext_resource path="res://02_prefabs/Volume/Volume.tscn" type="PackedScene" id=9]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+material = ExtResource( 1 )
+scale = Vector2( 9.375, 12.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Tween" type="Tween" parent="Buttons"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 680.0
+margin_right = 600.0
+margin_bottom = 800.0
+color = Color( 0, 0, 0, 0.709804 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 130.0
+margin_top = 742.638
+margin_right = 468.0
+margin_bottom = 770.638
+custom_fonts/font = ExtResource( 3 )
+text = "Press %s to go back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 130.0
+margin_top = 710.0
+margin_right = 468.0
+margin_bottom = 738.0
+custom_fonts/font = ExtResource( 3 )
+text = "Press %s to load level"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" type="CanvasLayer" parent="."]
+
+[node name="Fade" type="ColorRect" parent="Overlay"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Overlay/Fade"]
+
+[node name="ui_tick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="ui_back" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="ui_accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -80.0
+autoplay = true
+
+[node name="Tween" type="Tween" parent="Music"]
+
+[node name="Volume" parent="." instance=ExtResource( 9 )]
+visible = false

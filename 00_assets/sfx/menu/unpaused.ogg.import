@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/unpaused.ogg-0d269c2dfd34132996ca70eaa767e5cd.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/menu/unpaused.ogg"
+dest_files=[ "res://.import/unpaused.ogg-0d269c2dfd34132996ca70eaa767e5cd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

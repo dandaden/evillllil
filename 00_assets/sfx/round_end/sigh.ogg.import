@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sigh.ogg-7f5bfda6c7606ce350467e2c3e867cec.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/round_end/sigh.ogg"
+dest_files=[ "res://.import/sigh.ogg-7f5bfda6c7606ce350467e2c3e867cec.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

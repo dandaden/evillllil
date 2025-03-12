@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/climax.ogg-a5ae6ba11a5a59bc8ba756a2e092e865.oggstr"
+
+[deps]
+
+source_file="res://data/00_judy/sfx/climax.ogg"
+dest_files=[ "res://.import/climax.ogg-a5ae6ba11a5a59bc8ba756a2e092e865.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

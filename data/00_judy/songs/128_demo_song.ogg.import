@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/128_demo_song.ogg-084ef484adbb51f0884973d65da6804e.oggstr"
+
+[deps]
+
+source_file="res://data/00_judy/songs/128_demo_song.ogg"
+dest_files=[ "res://.import/128_demo_song.ogg-084ef484adbb51f0884973d65da6804e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

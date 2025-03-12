@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cool_sound.ogg-6bbbb20addcb58225608fe7f26b19d1a.oggstr"
+
+[deps]
+
+source_file="res://00_assets/sfx/menu/cool_sound.ogg"
+dest_files=[ "res://.import/cool_sound.ogg-6bbbb20addcb58225608fe7f26b19d1a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

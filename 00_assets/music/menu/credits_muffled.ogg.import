@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/credits_muffled.ogg-25915950daccf26f19eefaa9ca49cf83.oggstr"
+
+[deps]
+
+source_file="res://00_assets/music/menu/credits_muffled.ogg"
+dest_files=[ "res://.import/credits_muffled.ogg-25915950daccf26f19eefaa9ca49cf83.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

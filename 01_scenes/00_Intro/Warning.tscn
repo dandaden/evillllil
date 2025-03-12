@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://02_prefabs/Volume/Volume.tscn" type="PackedScene" id=1]
+[ext_resource path="res://01_scenes/00_Intro/warning.gd" type="Script" id=2]
+[ext_resource path="res://00_assets/fonts/Extrude.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://00_assets/sfx/ui/ui_accept.ogg" type="AudioStream" id=4]
+[ext_resource path="res://00_assets/fonts/HelvetiPixel.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 5 )
+
+[node name="Warning" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_Boxes" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Text_Boxes"]
+margin_right = 600.0
+margin_bottom = 272.0
+custom_constants/margin_top = 200
+
+[node name="Label" type="Label" parent="Text_Boxes/MarginContainer"]
+margin_top = 200.0
+margin_right = 600.0
+margin_bottom = 272.0
+custom_fonts/font = SubResource( 1 )
+text = "WARNING"
+align = 1
+valign = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Text_Boxes"]
+margin_top = 276.0
+margin_right = 600.0
+margin_bottom = 414.0
+custom_constants/margin_top = 80
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Text_Boxes/MarginContainer2"]
+margin_top = 80.0
+margin_right = 600.0
+margin_bottom = 138.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]This game contains adult content. 
+[color=red]Do not play if you are under the age of 18.[/color][/center]"
+text = "This game contains adult content. 
+Do not play if you are under the age of 18."
+fit_content_height = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="Text_Boxes"]
+margin_top = 418.0
+margin_right = 600.0
+margin_bottom = 558.0
+custom_constants/margin_top = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Text_Boxes/MarginContainer3"]
+margin_top = 80.0
+margin_right = 600.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Text_Boxes/MarginContainer3/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 28.0
+custom_constants/margin_right = 40
+custom_constants/margin_left = 40
+
+[node name="Label2" type="Label" parent="Text_Boxes/MarginContainer3/VBoxContainer/MarginContainer"]
+margin_left = 40.0
+margin_right = 560.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 3 )
+text = "Press %s to Continue"
+align = 1
+valign = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Text_Boxes/MarginContainer3/VBoxContainer"]
+margin_top = 32.0
+margin_right = 600.0
+margin_bottom = 60.0
+custom_constants/margin_right = 40
+custom_constants/margin_left = 40
+
+[node name="Label3" type="Label" parent="Text_Boxes/MarginContainer3/VBoxContainer/MarginContainer2"]
+margin_left = 40.0
+margin_right = 560.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 3 )
+text = "Press ESC to Quit"
+align = 1
+valign = 1
+
+[node name="Fade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Fade"]
+
+[node name="ui_accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[node name="Volume" parent="." instance=ExtResource( 1 )]
+visible = false

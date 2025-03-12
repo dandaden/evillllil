@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://00_assets/sfx/ui/ui_volume.ogg" type="AudioStream" id=1]
+[ext_resource path="res://00_assets/sprites/ui/volume.png" type="Texture" id=2]
+[ext_resource path="res://02_prefabs/Volume/volume.gd" type="Script" id=3]
+
+[node name="Volume" type="Sprite"]
+position = Vector2( 558, 28 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+hframes = 6
+script = ExtResource( 3 )
+
+[node name="hide_ui" type="Timer" parent="."]
+
+[node name="ui_volume" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -3.0
+
+[connection signal="timeout" from="hide_ui" to="." method="_on_hide_ui_timeout"]
+[connection signal="tree_exiting" from="ui_volume" to="." method="on_game_exiting"]

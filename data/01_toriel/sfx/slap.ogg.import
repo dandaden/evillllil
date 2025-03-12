@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/slap.ogg-5911f66144fdd299e59e767f99aa64a1.oggstr"
+
+[deps]
+
+source_file="res://data/01_toriel/sfx/slap.ogg"
+dest_files=[ "res://.import/slap.ogg-5911f66144fdd299e59e767f99aa64a1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gulp5.wav-8b7dd2a1fc67d8ae6ef4488ad9a11a57.sample"
+
+[deps]
+
+source_file="res://mods/Asriel Toriel BJ/voice/mouthgulp/gulp5.wav"
+dest_files=[ "res://.import/gulp5.wav-8b7dd2a1fc67d8ae6ef4488ad9a11a57.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
